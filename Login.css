@@ -1,0 +1,86 @@
+.jumbotron {
+    width:280px;
+    height: 350px;
+    background-image: url(bg7.jpg);
+    position:absolute;
+    top:200px;
+    right: 100px;
+    border-radius:10px
+}
+.color {
+    background-color: #F8F8F8
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+}
+body {
+    background-color: #FFFFFF;
+    background-image: url(head/1.jpg);
+    opacity:1;
+}
+hr {
+    height:3px;
+    border:none;
+    border-top:5px solid gray;
+}
+.form {
+    position:absolute;
+    top: 80px;
+    left: 10px;
+    width: 250px;
+    
+}
+.label {
+    position: absolute;
+    color: #000000;
+    left: 120px;
+    top: 80px;
+    font-size: 15px;
+    font-weight: bold;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-style: inherit;
+}
+.label {
+    position: absolute;
+    width:200px;
+    left: 120px;
+    top: 100px;
+   height:50px;
+    font-weight: bold;
+}
+#checkCode {
+    width: 150px;
+}
+
+
+.label2{
+	float:right;
+}.lead{
+  position: absolute;
+   top: 30px;
+ left: 110px;
+  font-size: 24px;
+  letter-spacing: 20px;
+  font-weight: bold;
+  font-family: Verdana;
+  color: #000000;
+}.ca{
+   position: absolute;
+   width: 900px;
+   height: 500px;
+   top:120px;
+  left:50px;
+
+
+}.modal-body{
+    background-image: url(bg9.jpg);
+}

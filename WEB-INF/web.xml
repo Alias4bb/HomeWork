@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>test1</servlet-name>
+    <servlet-class>homework.test1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>homework.test</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Check</servlet-name>
+    <servlet-class>homework.Check</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Regist</servlet-name>
+    <servlet-class>homework.Regist</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateXML</servlet-name>
+    <servlet-class>lesson8.CreateXML</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>caculator</servlet-name>
+    <servlet-class>homework.caculator</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckUser</servlet-name>
+    <servlet-class>homework.CheckUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>buy</servlet-name>
+    <servlet-class>homework.buy</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>homework.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>homework.logout</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetPhoto</servlet-name>
+    <servlet-class>homework.GetPhoto</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShoppingServlet</servlet-name>
+    <servlet-class>homework.ShoppingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>homework.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetInfo</servlet-name>
+    <servlet-class>homework.GetInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>homework.UpdateUser</servlet-class>
+  </servlet>
+ <servlet>
+    <servlet-name>Htmlcontent</servlet-name>
+    <servlet-class>lesson8.Htmlcontent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServerDate</servlet-name>
+    <servlet-class>lesson8.ServerDate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>YahooSearch</servlet-name>
+    <servlet-class>lesson8.YahooSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateTip</servlet-name>
+    <servlet-class>lesson8.CreateTip</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCounter</servlet-name>
+    <servlet-class>lesson8.UpdateCounter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateXML1</servlet-name>
+    <servlet-class>lesson8.CreateXML1</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>test1</servlet-name>
+    <url-pattern>/test1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Check</servlet-name>
+    <url-pattern>/Check</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Regist</servlet-name>
+    <url-pattern>/Regist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateXML</servlet-name>
+    <url-pattern>/CreateXML</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>caculator</servlet-name>
+    <url-pattern>/caculator</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckUser</servlet-name>
+    <url-pattern>/CheckUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>buy</servlet-name>
+    <url-pattern>/buy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetPhoto</servlet-name>
+    <url-pattern>/GetPhoto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingServlet</servlet-name>
+    <url-pattern>/ShoppingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/DownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetInfo</servlet-name>
+    <url-pattern>/GetInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/UpdateUser</url-pattern>
+  </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
+  <servlet-mapping>
+    <servlet-name>Htmlcontent</servlet-name>
+    <url-pattern>/Htmlcontent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServerDate</servlet-name>
+    <url-pattern>/ServerDate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>YahooSearch</servlet-name>
+    <url-pattern>/YahooSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateTip</servlet-name>
+    <url-pattern>/CreateTip</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCounter</servlet-name>
+    <url-pattern>/UpdateCounter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateXML1</servlet-name>
+    <url-pattern>/CreateXML1</url-pattern>
+  </servlet-mapping>
+</web-app>

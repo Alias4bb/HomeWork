@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>我的详细信息</title>
+  
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+ 
+<script src="jquery.min.js"></script>
+ 
+ <link type="text/css"  href="dist/css/bootstrap.min.css" rel="stylesheet">
+ <link type="text/css"  href="sweetalert-master/lib/sweet-alert.css" rel="stylesheet">
+  <link type="text/css"  href="Main.css" rel="stylesheet">
+ <script src="dist/js/bootstrap.min.js"></script>
+ <script src="sweetalert-master/lib/sweet-alert.min.js"></script>
+<style type="text/css">
+#code {
+ 
+  color: #333;
+  font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+  font-size: 16px;
+}
+
+#code .string{
+  color: #2a36ff;
+}
+
+#code .keyword{
+  color: #7f0055;
+  font-weight:bold;
+}
+
+#code .placeholder{
+  margin-left:15px;
+}
+
+#code .space{
+  margin-left:7px;
+}
+
+#code .comments{
+  color: #3f7f5f;
+}</style>
+ </head>      
+ <body ><div class="container  ">
+         <div class="row">
+     
+         <div class="col-md-9 col-md-offset-2" role="main">
+        
+        <div ><h2 class="page-header" >Bug总结</h2>
+     <p class="lead">当前项目作业中的几个具体Bug</p>
+         <div id="code" class="content">  
+          <h2>XML</h2>
+  <p> xml存在的页面问题就是在处理xml过程中利用dom4j建立xml文档
+   利用连接数据库获取session中id获取个人信息并创建XML文档但是在处理个人信息如生日时候会出现数据解析错误
+   因为使用的是mysql数据库具体没解决就删了生日XD.</p>
+       <h2>绘制表格</h2>
+       <p>  在表格的建立过程当中采用了DreamWeaver很快就建立单元格并删除和合并单元格。</p>
+    <h2>上传照片</h2>
+      <p> 上传图片按照书上流程来，几乎没什么问题，具体困难过程则是在将照片信息存入数据库中中文问题mysql设置统一UTF-8编码我把其他的多张上传删除了并添加了缩略图显示= =数据库中设置了一张photo表记录备注和路径供电子相册使用</p><div class="highlight"> <pre>
+      <code class="language-html" data-lang="html"><span class="space"/><span class="keyword">url</span>="jdbc:mysql://127.0.0.1:3306/user?user=root&password=&useUnicode=true&amp&<span class="string">characterEncoding=UTF8</span>&zeroDateTimeBehavior=convertToNull";  </code></pre></div>
+   <h2>计算器</h2>
+     <p> 这个我采用servlet获取表单中的值并将其给一个标签库中的类调用，通过类调用得到计算后的值，并将其在当前页面显示。</p>
+  
+  <h2>购物车</h2>
+    <p> 购物车在设置中文时候由于是Mysql在处理中文很有问题，需要在数据库连接时候设置它的编码方式，后面设置不同用户购物车只要设置外键就行</p><div class="highlight"> <pre>
+<code><span class="keyword">String</span> u_id=(<span class="keyword">String</span>)session.getAttribute("u_id");<span class="comments">//获取session中id值</span>
+  <span class="keyword">String</span> sql1 = "insert into cart(SP_NAME,SP_PRICE,BUY_NUM,COUNT,u_id) values('"+name+"','"+price+"','1','"+price+"','"+<span class="string">u_id</span>+"')";<span class="comments">//向数据库购物车中插入id绑定用户</span>
+</code></pre></div>
+ <h2>电子相册</h2>
+     <p> 电子相册就是从数据库中获取照片路径并改良下ajax代码，设置读取所有照片数量</p>
+     <div class="highlight">
+<pre>
+  <code><span class="keyword">DBConn</span> db=new <span class="keyword">DBConn()</span>;<span class="comments">//连接数据库</span>
+    <span class="keyword">String</span> sql="select <span class="keyword">count(*)</span> from photo";
+    <span class="comments">//获取photo数量</span>
+     <span class="keyword">int</span> count=0;
+    <span class="keyword">ResultSet</span> rs=db.doSelect(sql);
+     if(rs.next()){
+     count=rs.getInt(1);
+     }
+   <span class="string">function</span> prev(){<span class="comments">//响应“上一张”</span>
+     selected = (selected-1+<span class="string"><%=count%></span>)%<span class="string"><%=count%></span>;
+     <span class="keyword">getPhoto()</span>;
+     }
+   <span class="string">function</span> next(){<span class="comments">//响应“下一张” </span>
+     selected = (selected+1+<span class="string"><%=count%>)%<span class="string"><%=count%></span>;
+     <span class="keyword">getPhoto()</span>;
+   }</code>
+</pre></div>
+     <h2>邮件</h2> 
+      <p> 这个照书上来的，几乎傻瓜式没什么问题</p>
+     <h2>网上书店</h2> 
+      <p>这个在建立书籍数据库，并将得到的数据进行分页查询，还有设置库存，缺点是购买后库存就减少，其实应该结账后才减少其次是mysql的分页查询方法不一样具体如下</p>
+     <div class="highlight"> <pre>
+      <code class="language-html" data-lang="html"><span class="keyword">String</span> sql1="select * from book where book_id <span class="string">limit</span> "+(pageNow-1)*pageSize+","+pageSize+"";
+        <span class="comments">//mysql分页使用limit</span></code></pre></div>
+ <h2>总结</h2> 
+  <p> 其他的ajax什么注册登录我都觉得没多大问题，因为都比较简单，具体觉得不好的地方就是没用采用jQuery里面的ajax方法</p>
+</div></div></div></div></div>
+  </body><script>(function($) {
+  $.fn.typewriter = function() {
+    this.each(function() {
+      var $ele = $(this), str = $ele.html(), progress = 0;
+      $ele.html('');
+      var timer = setInterval(function() {
+        var current = str.substr(progress, 1);
+        if (current == '<') {
+          progress = str.indexOf('>', progress) + 1;
+        } else {
+          progress++;
+        }
+        $ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+        if (progress >= str.length) {
+          clearInterval(timer);
+        }
+      }, 75);
+    });
+    return this;
+  };
+})(jQuery);
+$(function(){
+    $(".content").typewriter();
+    } );
+</script>
+</html>
+

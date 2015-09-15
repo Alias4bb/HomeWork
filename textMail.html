@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>邮件发送</title>
+	
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+ <link type="text/css"  href="dist/css/bootstrap.min.css" rel="stylesheet">
+ <script src="dist/js/bootstrap.min.js"></script>
+  <script src="jquery.min.js"></script>
+<style type="text/css">.bc-sidebar > ul > li > a {
+    border: 1px solid #e5e5e5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+</style>
+  </head>
+  
+  <body><div class="container">
+  <div class="row"><div class="col-sm-3" >
+        <div class="bc-sidebar" id="toc">
+            <ul class="nav">
+                <li class="toc-active toc-h2 active"><a href="#toc1">文本型邮件</a></li>
+                <li class="toc-h2"><a href="#toc2">HTML型邮件</a></li>
+                <li class="toc-h2"><a href="#toc3">附件型邮件</a></li>
+               
+            </ul></div>
+        </div><div class="col-sm-9">
+  <div  id="toc1" ><h2>文本型邮件</h2>
+  <form name="form1" method="post" action="SendMail1.jsp">
+    	SMTP服务器：<input type="text" id="SMTPHost" name="SMTPHost"><br>
+    	登录帐号：<input type="text" id="user" name="user"><br>
+    	登录密码：<input type="password" id="password" name="password"><br>
+    	<br>
+    	发件人邮箱：<input type="text" id="from" name="from"><br>
+    	收件人邮箱：<input type="text" id="to" name="to"><br>
+    	邮件标题：<input type="text" id="subject" name="subject"><br>
+    	邮件内容：<textarea id="content" name="content" rows="5" cols="40"></textarea><br>
+		<br>
+		<input type="submit" name="submit" value="发送">&nbsp;
+		<input type="reset" name="reset" value="重填">    	
+    </form></div>
+    <div id="toc2" ><h2>HTML邮件</h2>
+    <form name="form1" method="post" action="sendMail2.jsp">
+    	SMTP服务器：<input type="text" id="SMTPHost" name="SMTPHost"><br>
+    	登录帐号：<input type="text" id="user" name="user"><br>
+    	登录密码：<input type="password" id="password" name="password"><br>
+    	<br>
+    	发件人邮箱：<input type="text" id="from" name="from"><br>
+    	收件人邮箱：<input type="text" id="to" name="to"><br>
+    	邮件标题：<input type="text" id="subject" name="subject"><br>
+    	邮件内容HTML代码：<textarea id="content" name="content" rows="5" 
+cols="40"></textarea><br>
+		<br>
+		<input type="submit" name="submit" value="发送">&nbsp;
+		<input type="reset" name="reset" value="重填">    	
+    </form>   </div> 
+    <div id="toc3">
+     <h2>发送带附件HTML型邮件</h2>
+    <hr>
+    <form name="form1" enctype="multipart/form-data" method="post" 
+action="sendMail3.jsp">
+    	SMTP服务器：<input type="text" id="SMTPHost" name="SMTPHost">*<br>
+    	登录帐号：<input type="text" id="user" name="user">*<br>
+    	登录密码：<input type="password" id="password" name="password">*<br>
+    	<br>
+    	发件人邮箱：<input type="text" id="from" name="from">*<br>
+    	收件人邮箱：<input type="text" id="to" name="to">*<br>
+    	邮件标题：<input type="text" id="subject" name="subject">*<br>
+    	邮件内容HTML代码：<textarea id="content" name="content" rows="5" cols="40">
+</textarea>*<br>
+    	附件：<input type="file" id="filename" name="filename"><br>
+		<br>
+		<input type="submit" name="submit" value="发送">&nbsp;
+		<input type="reset" name="reset" value="重填">    	
+    </form>    
+    </div></div></div></div>
+  </body>
+</html>

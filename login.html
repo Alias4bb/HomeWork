@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录界面</title>
+
+            
+       
+   
+   <script src="jquery.min.js"></script>
+ <script type="text/javascript" src="jquery-ui.min.js"></script>
+ <link type="text/css"  href="jquery-ui.min.css" rel="stylesheet">
+ <link type="text/css"  href="dist/css/bootstrap.min.css" rel="stylesheet">
+ <link type="text/css"  href="sweetalert-master/lib/sweet-alert.css" rel="stylesheet">
+  <link type="text/css"  href="dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link type="text/css"  href="Login.css" rel="stylesheet">
+ <script src="dist/js/bootstrap.min.js"></script>
+ <script src="dist/js/bootstrap-datetimepicker.min.js"></script>
+ <script src="sweetalert-master/lib/sweet-alert.min.js"></script>
+<script>
+$(function(){
+    $("#time").datetimepicker({format:'yyyy-mm-dd',autoclose:'true',minView:'month'});
+  $("#img").click(function(){$("#img").attr("src","test2.jsp");});
+    } );
+   </script>
+ <script  src="js.js"></script>
+</head>
+
+<h1 >Alias's Universe</h1>
+<hr><body> 
+
+
+
+
+<div id="myCarousel" class="carousel slide ca col-md-9 " data-ride="carousel">
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>   
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+      <div class="item active">
+         <img src="head/tulang.jpg" width="100%" height="100%" alt="BiliBili">
+      </div>
+      <div class="item">
+         <img src="head/saber.jpg"  width="100%" height="100%" alt="GitHub">
+      </div>
+      <div class="item">
+         <img src="head/lin.jpg"   width="100%" height="100%" alt="StackOverFlow">
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&rsaquo;</a>
+</div> 
+
+<div class="container" ><div class="jumbotron ">
+<p class=" lead"><strong>登录</strong></p>
+    <div class="form"><form action="Check" method="post" role="form">
+<div class="form-group "><div class="input-group input-group-sm"><span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span><input name="username" type="text" class="form-control color" placeholder="输入您的用户名" id="inputusername" /></div></div>
+
+<div class="form-group"><div class="input-group input-group-sm"><span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span><input name="password" type="password" class="form-control color" placeholder="输入您的密码" id="inputpassword"/></div></div>
+<div class="form-group"><input type = "text"  id="checkCode" maxlength=4  name="code"class="form-control color "  placeholder="验证码"/><span class="label"><img id="img" border="0" src="test2.jsp"></span></div> 
+  
+<div class="form-group clearfix"><span class="label3"><input type="checkbox"/>记住我</span><span class="label2"><a href="forgetpassword.jsp">忘记密码？</a></span></div>
+<div class="form-group "><input type="submit" class="btn btn-primary btn-block" value="确认" 
+   onclick="return check();"/></div></form>
+<div class="form-group" ><a class="btn btn-primary btn-block" data-toggle="modal" 
+   data-target="#myModal">注册</a></div>
+   <div class="modal fade"id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" align="ceter" id="myModalLabel">
+                <strong>用户注册</strong>
+            </h4>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            <form role="form" action="Regist" method="post">
+              <div class="form-group has-feedback">
+                <label class="control-label">用户名</label>
+                <input name="name" onchange="show(this.value)" type="text" class="form-control " />
+                <span id="m" class="glyphicon glyphicon-remove-sign form-control-feedback hide"></span>
+</div><div  id='x' >
+                </div>
+
+              <div class="form-group has-feedback"><label class="control-label">密码</label><input name="pass" type="password" class="form-control" id="p" onchange="check1(this.value)"/></div>  <div id="pass"></div>
+              <div class="form-group has-feedback"><label class="control-label">确认密码</label><input name="pass" type="password" class="form-control " onchange="check2(this.value)" /></span></div><div id="pass1"></div>
+              <div class="form-group has-feedback"><label class="control-label">邮箱</label><input name="email" type="text" class="form-control " onchange="check3(this.value)" /></span></div> <div id="email"></div>
+              <div class="form-group has-feedback"><label class="control-label">生日</label><input name="time" id="time" type="text" class="form-control "  /></div>
+             <div class="form-group "><input type="submit" class="btn btn-block btn-primary" value="确认"/></div><div class="form-group "><input type="reset" class="btn btn-block btn-primary" value="重置"/></div>
+               </form>
+            </div>
+         
+               
+               
+                
+                
+     
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
+            
+            
+         </div>
+      </div><!-- /.modal-content -->
+</div><!-- /.modal --></div></div>
+
+</div></div></div> 
+
+</body>
+</html>
+

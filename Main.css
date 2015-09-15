@@ -1,0 +1,47 @@
+h1{
+    
+	top:10px;
+}#s{
+   position: absolute;
+   width:800px;
+   height: 500px;
+   top: 250px;left: 300px;
+} 
+
+   #icontent{
+  
+   width:800px;
+   height: 500px;
+   
+   }
+.bc-sidebar > ul > li > a {
+    border: 1px solid #e5e5e5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+}.subhead {
+    text-align: left;
+}
+.subhead {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.jumbotron {
+    background: linear-gradient(45deg, #020031 0px, #6d3353 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px rgba(0, 0, 0, 0.2) inset;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}.name{
+	
+	font-size:20px;
+	font-weight:bold;
+	font-color:#ffffff;
+}.footer-top{
+	background: -moz-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)),url(http://demos.hacks.mozilla.org/openweb/resources/images/patterns/flowers-pattern.jpg);
+
+}.x{
+	box-shadow: 8px 8px 5px #428bca;
+}

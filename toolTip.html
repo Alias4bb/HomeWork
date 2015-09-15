@@ -1,0 +1,58 @@
+<html> <head> <title>工具提示 </title>
+    <meta http-equiv="content-type" content="text/html; charset=gb2312">  </head>
+
+<script>
+var xmlHttp; //定义一个变量用于存放XMLHttpRequest对象
+var x,y; //记录事件发生时的鼠标位置
+function createXMLHttpRequest() {//创建一个XMLHttpRequest对象
+	 if (window.ActiveXObject) 
+	   xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	 else if (window.XMLHttpRequest) 
+	   xmlHttp = new XMLHttpRequest();
+}
+function over(index){//通过AJAX取得提示信息的
+    x = event.clientX; //记录事件发生时的鼠标位置
+    y = event.clientY;		
+    createXMLHttpRequest();//创建一个XMLHttpRequest对象
+    xmlHttp.onreadystatechange = processor; //将状态触发器绑定到一个函数
+    xmlHttp.open("GET", "CreateTip?index="+index); //建立一个对服务器的调用
+    xmlHttp.send(null); //发送请求
+}
+function processor() {//处理从服务器返回的XML文档
+	 var result; //定义一个变量用于存放从服务器返回的响应结果
+	 if(xmlHttp.readyState == 4) { //如果响应完成
+	   if(xmlHttp.status == 200) {//如果返回成功
+	     //取出服务器返回的XML文档的所有shop标签的子节点
+	     result = xmlHttp.responseXML.getElementsByTagName("shop");
+	     document.all.tip.style.display = "block";//显示工具提示
+         document.all.tip.style.top = y; //显示工具提示的起始坐标
+	     document.all.tip.style.left = x+10;
+	     document.all.photo.src = result[0].childNodes[2].firstChild.nodeValue;
+	     document.all.tipTable.rows[1].cells[0].innerHTML="商品名称："+
+	     	     result[0].childNodes[0].firstChild.nodeValue;
+	     document.all.tipTable.rows[2].cells[0].innerHTML="商品价格："+
+	     	     result[0].childNodes[1].firstChild.nodeValue;
+	 }
+    }
+}
+function out(){
+	 document.all.tip.style.display = "none";
+}								
+</script>
+<body>
+    <h2>工具提示</h2><br>
+    <hr>
+    <a href="#" onmouseover="over(0)" onmouseout="out()">商品一</a><br><br>
+    <a href="#" onmouseover="over(1)" onmouseout="out()">商品二</a><br><br>
+    <a href="#" onmouseover="over(2)" onmouseout="out()">商品三</a><br><br>
+    <div id="tip" style="position:absolute;display:none;border:1px;border-style:solid;">
+	   <TABLE id="tipTable" border="0" bgcolor="#ffffee">
+	     <TR align="center">
+	       <TD><img id="photo" src="" height="80" width="80"></TD>
+	     </TR>
+	     <TR><TD></TD></TR>
+	     <TR><TD></TD></TR>
+	   </TABLE>
+   </div>	        
+  </body></html>
+
